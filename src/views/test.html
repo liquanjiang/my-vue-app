@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div">0</div>
+</body>
+<script>
+    window.onbeforeunload = function(){
+      return confirm("确定退出吗");
+    }
+    const div = document.getElementById('div')
+    setInterval(function(){
+      const d =  div.innerText
+      div.innerText = parseInt(d,10) + 1
+    },1000)
+</script>
+</html>
+
+
+

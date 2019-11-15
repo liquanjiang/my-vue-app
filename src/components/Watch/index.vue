@@ -8,6 +8,11 @@
 </template>
 
 <script>
+
+/**
+   props和watch（监控）的用法示例
+   *
+   * */
 export default {
   name: 'index',
   data () {

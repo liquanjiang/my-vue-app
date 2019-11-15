@@ -10,6 +10,11 @@
 </template>
 
 <script>
+
+/**
+   data和computed（计算属性）的用法示例
+   *
+   * */
 export default {
   name: 'index',
   data () {
