@@ -18,7 +18,8 @@ export default {
   data () {
     return {
       preName: '李大师',
-      preSalary: 100000
+      preSalary: 100000,
+      ot: 0
     }
   },
   props: {
@@ -42,6 +43,23 @@ export default {
     },
     preName (newV) {
       console.log(newV)
+    }
+  },
+  mounted () {
+    this.bindKey()
+  },
+  methods: {
+    bindKey () {
+      document.onkeydown = (e) => {
+        if (e.shiftKey) {
+          let nt = new Date().getTime()
+          let ct = nt - this.ot
+          if (ct > 0 && ct < 300) {
+            alert('双击了shift')
+          }
+          this.ot = nt
+        }
+      }
     }
   }
 }
