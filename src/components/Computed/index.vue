@@ -4,6 +4,9 @@
       <p>排骨价格{{price}}元/斤</p>
       <p>排骨重量{{weight}}斤</p>
       <p>排骨总价{{money}}元</p>
+      <div class="circle-div">
+        <span class="sp-circle"></span>
+      </div>
     </div>
     <div class="button" @click="changeMoney">我要涨价</div>
   </div>
@@ -61,5 +64,36 @@ export default {
     font-size:14px;
     margin:10px auto;
     cursor:pointer;
+  }
+  .circle-div {
+    background:#f1f111
+  }
+  /* Spinner Circle Rotation */
+  .sp-circle {
+    border: 4px rgba(98, 98, 198, 0.25) solid;
+    border-top: 4px rgb(98,98,198) solid;
+    border-radius: 50%;
+    -webkit-animation: spCircRot 1s infinite linear;
+    animation: spCircRot 1s infinite linear;
+    width:20px;
+    height:20px;
+    display:block;
+  }
+
+  @-webkit-keyframes spCircRot {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(359deg);
+    }
+  }
+  @keyframes spCircRot {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
   }
 </style>

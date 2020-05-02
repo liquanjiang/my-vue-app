@@ -7,6 +7,8 @@
 
 <script>
 import moment from 'moment'
+import calendar from 'solarday2lunarday'
+
 export default {
   name: 'index',
   inject: ['key'],
@@ -18,6 +20,13 @@ export default {
     }
   },
   mounted () {
+    console.log(calendar.solar2lunar())
+    console.log(calendar.solar2lunar('2025-05-01'))
+    console.log(calendar.isLeapYear(2022))
+    console.log(calendar.getConstellation(7, 16))
+    console.log(calendar.lunarYearDays(2020))
+    console.log(calendar.getAllFestival(2021))
+
     this.timer = setInterval(() => {
       this.getTime()
     }, 1000)
@@ -36,9 +45,9 @@ export default {
 </script>
 
 <style scoped>
-.clock{
-  width:300px;
-  height:100px;
-  margin:20px auto;
-}
+  .clock {
+    width: 300px;
+    height: 100px;
+    margin: 20px auto;
+  }
 </style>
