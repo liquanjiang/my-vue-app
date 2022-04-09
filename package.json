@@ -14,7 +14,7 @@
     "core-js": "^3.3.2",
     "lodash": "^4.17.15",
     "mathjs": "^6.2.3",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "rxjs": "^6.5.3",
     "solarday2lunarday": "^1.10.0",
     "vue": "^2.6.10",
